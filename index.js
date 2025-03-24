@@ -1,11 +1,10 @@
 const express = require("express");
 const app = express();
 const { format } = require('date-fns');
-const port = process.env.PORT || 3000;
+
 
 // Middleware for parsing JSON and urlencoded form data
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+
 
 // Logging middleware
 app.use(function(req, res, next) {
@@ -39,5 +38,6 @@ app.use((err, req, res, next) => {
 
 // Start the server
 app.listen(3000, () => {
-  console.log(`Server running on http://localhost:3000`);
+  console.log("Server is running on port 3000");
 });
+
